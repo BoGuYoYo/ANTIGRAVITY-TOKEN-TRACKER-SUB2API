@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "url": "https://your-sub2api-domain:8443/tracker-ingest/ingest",
+  "secret": "REPLACE_WITH_TRACKER_SECRET",
+  "timeoutMs": 2000,
+  "model": ""
+}

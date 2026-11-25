@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.env
+relay.env
+relay.json
+sync-state.json
+quota.json
+settings.json

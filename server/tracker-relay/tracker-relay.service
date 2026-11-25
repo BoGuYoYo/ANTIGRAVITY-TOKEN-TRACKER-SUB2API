@@ -1,0 +1,23 @@
+[Unit]
+Description=Antigravity Token Tracker relay (sub2api usage_logs ingest)
+Documentation=https://github.com/Willian-Wu/Antigravity-Token-Tracker
+After=docker.service network-online.target
+Wants=network-online.target
+Requires=docker.service
+
+[Service]
+Type=simple
+User=<YOUR_USER>
+Group=<YOUR_USER>
+EnvironmentFile=/opt/sub2api/tracker-relay/relay.env
+ExecStart=/usr/bin/python3 /opt/sub2api/tracker-relay/relay.py
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
